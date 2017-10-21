@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Login</title>
+
+
+<script> 
+function validate()
+{ 
+var email = document.form.email.value;
+var password = document.form.password.value;
+
+else if (email==null || email=="")
+{ 
+alert("Email can't be blank"); 
+return false; 
+}
+
+else if(password.length<6)
+{ 
+alert("Password must be at least 6 characters long."); 
+return false; 
+} 
+
+} 
+</script> 
+</head>
+<body>
+
+<center><h2>Java LOGIN application TRAVELERS </h2></center>
+<form name="form" action="LoginServlet" method="post" onsubmit="return validate()">
+<table align="center">
+
+<tr>
+<td>Email</td>
+<td><input type="text" name="user_email" required="required"/></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" name="user_password" required="required" /></td>
+</tr>
+
+
+<tr>
+<td><input type="submit" value="Login"></input><input type="reset" value="Reset"></input></td>
+<td><a href=Register.html> Register</a></td>
+
+</tr>
+</table>
+</form>
+</body>
+
+</html>
