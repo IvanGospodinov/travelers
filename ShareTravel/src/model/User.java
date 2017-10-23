@@ -1,29 +1,40 @@
 package model;
 
+import java.util.Set;
+
 public class User {
 
 	
 	
 	private int userID;
-	private String userName;
+	private String username;
 	private String password;
 	private String email;
 	private String firstName;
 	private String lastName;
 	private String pictureURL;
+	Set<Post> posts;
 	
-	public User(String userName, String password, String email, String firstName, String lastName, String puctureUTL) {
+	public User(String username, String password, String email, String firstName, String lastName, String pictureURL) {
 		super();
-		this.userName = userName;
+		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.pictureURL = pictureURL;
-
 	}
 	
-	
+	public User(int userID, String uname, String password, String firstName, String lastName, String pictureURL) {
+		super();
+		this.userID = userID;
+		this.username = uname;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.pictureURL = pictureURL;
+
+	}
 	
 	
 	public User(String email, String password) {
@@ -32,7 +43,10 @@ public class User {
 		this.email = email;
 	}
 
-
+	public User(String email) {
+		super();
+		this.email = email;
+	}
 
 
 	public String getPictureURL() {
@@ -45,13 +59,11 @@ public class User {
 	}
 
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
-	public void setUserName(String userName) {
-		if (validateString(userName)) {
-			this.userName = userName;
-		}
+	public void setUsername(String username) {
+			this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -115,6 +127,14 @@ public class User {
 		} else if (!email.equals(other.email))
 			return false;
 		return true;
+	}
+
+	public Set<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(Set<Post> posts) {
+		this.posts = posts;
 	}
 
 	

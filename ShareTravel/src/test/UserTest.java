@@ -11,20 +11,18 @@ import model.UserException;
 public class UserTest {
 
 	private UserDAO userDao = new UserDAO();
-	private User testUser = new User("Te11sdf2st", "Tessdf112tTest", "Tes1sdf12tTest", "Tessdft1T12est", "T12estsdfTest","Tesdfst12Test");
+	private User testUser = new User("Tessdf112tTest", "Tessdf112tTest", "Tessdf112tTest", "Tessdf112tTest", "Tessdf112tTest","Tessdf112tTest");
 	
 	@Test
 	public void testRegisterUser() throws UserException {
-		String id = userDao.registerUser(testUser);
+		userDao.registerUser(testUser);
 		
-		assertNotEquals(id, "FAIL");
 		
-		int id2 = userDao.loginUser(testUser);
-		System.out.println("ID after login " + id2);
+		boolean user2 = userDao.loginUser("Tessdf112tTest", "Tes1sdf12tTest");
 		
-		//assertEquals(id, id2);
+		assertEquals(user2, true);
 		
-		testUser.setUserID(id2);
+		//testUser.setUserID(user);
 	}
 
 
