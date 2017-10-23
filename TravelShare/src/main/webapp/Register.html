@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Register</title>
+<script> 
+function validate()
+{ 
+var uname = document.form.uname.value;
+var user_email = document.form.user_email.value;
+var user_password = document.form.user_password.value;
+var user_conpassword= document.form.user_conpassword.value;
+var user_firstname = document.form.user_firstname.value;
+var user_lastname = document.form.user_lastname.value;
+var user_pictureURL=document.form.user_pictureURL.value;
+if (uname==null || uname=="")
+{ 
+alert("User Name can't be blank"); 
+return false; 
+}
+else if (user_email==null || user_email=="")
+{ 
+alert("Email can't be blank"); 
+return false; 
+}
+else if(user_password.length<6)
+{ 
+alert("Password must be at least 6 characters long."); 
+return false; 
+} 
+else if (user_password!=user_conpassword)
+{ 
+alert("Confirm Password should match with the Password"); 
+return false; 
+} 
+else if (user_firstname==null || user_firstname=="")
+{ 
+alert("First Name can't be blank"); 
+return false; 
+}
+else if (user_lastname==null || user_lastname=="")
+{ 
+alert("Last Name can't be blank"); 
+return false; 
+}
+} 
+</script> 
+</head>
+<body>
+<center><h2>Registration application Share Travel </h2></center>
+<form name="form" action="RegisterServlet" method="post" onsubmit="return validate()">
+<table align="center">
+<tr>
+<td> User Name</td>
+<td><input type="text" name="uname" /></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" name="user_email" /></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" name="user_password" /></td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td><input type="password" name="user_conpassword" /></td>
+</tr>
+
+<tr>
+<td> User First Name</td>
+<td><input type="text" name="user_firstname" /></td>
+</tr>
+<tr>
+<td> User Last Name</td>
+<td><input type="text" name="user_lastname" /></td>
+</tr>
+
+<tr>
+<td> Picture</td>
+<td><input type="text" name="user_pictureURL" /></td>
+</tr>
+
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Register"></input><input
+type="reset" value="Reset"></input></td>
+</tr>
+</table>
+</form>
+</body>
+
+
+
+
+</html>

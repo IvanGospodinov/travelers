@@ -1,4 +1,4 @@
-package model.db;
+package model.dbConnection;
 
 	
 	import java.sql.Connection;
