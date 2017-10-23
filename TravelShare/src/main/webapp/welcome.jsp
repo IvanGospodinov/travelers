@@ -18,10 +18,10 @@
 				<tr>
 					<td>Category</td>
 					<td><select name="category">
-							<option value="SEA">Sea</option>
-							<option value="MAUNTAIN">Mountain</option>
-							<option value="CAVE">Cave</option>
-							<option value="CITY">City</option>
+							<option value="1">Sea</option>
+							<option value="2">Mountain</option>
+							<option value="3">Cave</option>
+							<option value="4">City</option>
 
 					</select></td>
 
