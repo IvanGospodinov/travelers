@@ -11,11 +11,11 @@
 		<h5>Choose Category</h5>
 		<br/>
 				<select>
-					<option value="Nature">Nature</option>
-					<option value="Animals">Animals</option>
-					<option value="Food">Food</option>
-					<option value="People">People</option>
-				</select> <br/>
+					<option value="1">Nature</option>
+					<option value="2">Animals</option>
+					<option value="3">Food</option>
+					<option value="4">People</option>
+				</select> <br><br><br/>
 			</form>
 	<form class="header-buttons" id="addNewPost" action="newPost.jsp">
 				<input type="submit" value="Add New Post">

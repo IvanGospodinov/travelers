@@ -21,7 +21,7 @@ public class UserDAO {
 	private static final String SELECT_USER_SQL = "SELECT user_id FROM users WHERE user_email = ? AND user_password = ?";
 	private static final String GET_USER_FROM_SQL = "SELECT user_id, uname, user_password, user_firstname, user_lastname, user_pictureURL FROM users WHERE user_email = ?";
 
-	public void registerUser(User user) throws UserException {
+	public int registerUser(User user) throws UserException {
 		Connection connection = DBConnection.getInstance().getConnection();
 
 		try {
@@ -43,6 +43,7 @@ public class UserDAO {
 		} catch (SQLException e) {
 			throw new UserException("User cannot be registered now, please try again later!", e);
 		}
+		return user.getUserID();
 
 	}
 

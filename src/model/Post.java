@@ -37,16 +37,6 @@ public class Post {
 
 	
 	
-	
-	public Post(String title, String location, String description) {
-		super();
-		this.title = title;
-		this.location = location;
-		this.description = description;
-	}
-
-
-
 	public Post(String title, String description, LocalDateTime dateTime, LocalDateTime dateTime_modification, int user_id, int category_id, String location) {
 		this.title = title;
 		this.description = description;

@@ -1,6 +1,8 @@
 package test;
 
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.time.LocalDate;
 
@@ -12,19 +14,8 @@ import model.UserException;
 
 public class PostTest {
 	
-//	long timeNow = Calendar.getInstance().getTimeInMillis();
-//	java.sql.Timestamp ts = new java.sql.Timestamp(Calendar.getInstance().getTimeInMillis());
-	
-	
 	private PostDAO postDao = new PostDAO();
-	private Post postTest = new Post("rrr","rrr",    LocalDate.now(),  LocalDate.now(), 1,1,"sofia");
-	
-	
-	
-	//java.sql.Timestamp ts = new java.sql.Timestamp(timeNow);
-	
-	//preparedStatement.setTimestamp(TIME_COL_INDEX, ts);
-	
+	private Post postTest = new Post("AAABBB","AAABBB", LocalDate.now(),  LocalDate.now(), 1,1,"sofia");
 
 	@Test
 	public void test() {
@@ -33,18 +24,12 @@ public class PostTest {
 		try {
 			result = postDao.createPost(postTest);
 		} catch (UserException e) {
-			// TODO Auto-generated catch block
+		System.out.println("v test bloka syso");
 			e.printStackTrace();
 		}
-		assertEquals(result, 0);
-		
+		assertNotEquals(result, 0);
 		
 		System.out.println("ID after post " + result);
-		
-		//fail("Not yet implemented");
 	}
-
 }
-
-
 

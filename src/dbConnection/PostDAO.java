@@ -34,19 +34,11 @@ public class PostDAO {
 	}
 	
 	
-	private static final String INSERT_POST_SQL = "INSERT INTO posts VALUES (null, ?,?,)";
+	private static final String INSERT_POST_SQL = "INSERT INTO posts VALUES (null,?,?,?,?,?,?,?)";
 	
-	//INSERT INTO `travel-share`.posts VALUES (null, 'rrr','rrr','2017-10-22 22:53:06',null,1,1,1)
-		
-		
-		
 	public int createPost(Post post) throws UserException {
-		
-		//Connection con=DBManager.getInstance().getConnection();
-		
+	
 		Connection connection = DBConnection.getInstance().getConnection();
-			
-		
 		
 			try {
 				PreparedStatement ps = connection.prepareStatement(INSERT_POST_SQL, Statement.RETURN_GENERATED_KEYS);
@@ -57,7 +49,7 @@ public class PostDAO {
 				ps.setDate(4, new java.sql.Date(System.currentTimeMillis()));
 				ps.setInt(5, 1);
 				ps.setInt(6, 1);
-				ps.setInt(7, 1);
+				ps.setString(7, "sofia");
 
 				
 //				ps.setString(1, post.getCategory());
@@ -68,23 +60,11 @@ public class PostDAO {
 				
 				
 				rs.next();
-				
-				
-				
-				rs.next();
 				post.setPostId(rs.getInt(1));
-			
 				return post.getPostId();
-
 			} catch (SQLException e) {
 				throw new UserException("post cannot be registered now, please try again later!", e);
 			}
-		
-//		} else {
-//			return "FAIL";
-//		}
-			//return "FAIL";
+
 	}
-
-
 }
