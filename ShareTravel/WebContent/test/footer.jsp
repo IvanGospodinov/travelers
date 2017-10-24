@@ -6,14 +6,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-		<c:if test="${ sessionScope.user == null }">
-			<c:redirect url="login.jsp"></c:redirect>
-		</c:if>
-
-		<!--<jsp:include page="header.jsp"></jsp:include>-->
-		<h1>Tam otgore na 3 etaj do lelq Rosi.</h1>
-		<!--<jsp:include page="footer.jsp"></jsp:include>-->
+	<div class="footer">
+		<form class="footerButton" action="about.jsp">
+			<input type="submit" value="About Us">
+		</form>
+		<form class="footerButton" action="contact.jsp">
+			<input type="submit" value="Contacts">
+		</form>
+	</div>
 </body>
 </html>
