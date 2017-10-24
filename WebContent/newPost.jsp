@@ -8,7 +8,7 @@
 </head>
 
 
-<form class="header-buttons" action="./CreatePost" method="post" enctype="multipart/form-data">
+<form class="header-buttons" action="CreatePost" method="post" enctype="multipart/form-data">
 		<fieldset>
 			<legend>Create post</legend>
 
@@ -44,19 +44,19 @@
 
 				<tr>
 					<td>Select files</td>
-					<td><input type="file" name="file"></td>
+					<td><input type="file" name="file1" /></td>
 
 				</tr>
 				
 				<tr>
 					<td></td>
-					<td><input type="file" name="file"></td>
+					<td><input type="file" name="file2"></td>
 
 				</tr>
 				
 				<tr>
 					<td></td>
-					<td><input type="file" name="file"></td>
+					<td><input type="file" name="file3"></td>
 
 				</tr>
 				<tr>

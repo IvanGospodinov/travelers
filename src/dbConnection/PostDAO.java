@@ -47,9 +47,9 @@ public class PostDAO {
 				ps.setString(2, post.getDescription());
 				ps.setDate(3, new java.sql.Date(System.currentTimeMillis()));
 				ps.setDate(4, new java.sql.Date(System.currentTimeMillis()));
-				ps.setInt(5, 1);
-				ps.setInt(6, 1);
-				ps.setString(7, "sofia");
+				ps.setInt(5, post.getCategory_id());
+				ps.setInt(6, post.getUser_id());
+				ps.setString(7, post.getLocation());
 
 				
 //				ps.setString(1, post.getCategory());

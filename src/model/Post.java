@@ -143,6 +143,18 @@ public class Post {
 		return title;
 	}
 
+
+
+	public int getUser_id() {
+		return user_id;
+	}
+
+
+
+	public int getCategory_id() {
+		return category_id;
+	}
+
 //	public Set<Attachment> getAttachments() {
 //		return attachments;
 //	}
@@ -155,4 +167,7 @@ public class Post {
 //		return emotions;
 //	}
 
+	
+	
+	
 }
